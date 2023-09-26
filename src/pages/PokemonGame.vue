@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>¿Quien es este Pokemon?</h1>
+        <h1>¿que pokemon es ?</h1>
 
         <pokemonPicture/>
 
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    
+    // al usar el @ va desde la raiz
     import pokemonPicture from '@/components/pokemonPicture';
     import pokemonOptions from '@/components/pokemonOptions';
 
