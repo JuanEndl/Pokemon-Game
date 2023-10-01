@@ -1,6 +1,6 @@
 <template>
 
-    |<!-- intenta verificar si pokemon tiene un valor -->
+    <!-- intenta verificar si pokemon tiene un valor -->
     <h1 v-if="!pokemon"> Espere por favor...... </h1> 
 
     
@@ -8,7 +8,7 @@
         <h1>¿que pokemon es ?</h1>
 
         <pokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
-        <pokemonOptions :pokemons="pokemonArr"/>
+        <pokemonOptions :pokemons="pokemonArr" @selection="checkAnswer"/>
 
 
 
@@ -40,8 +40,15 @@ export default{
 
             const randomInt = Math.floor( Math.random() * 4 )
             this.pokemon = this.pokemonArr[randomInt]
-            console.log(randomInt);
+            // console.log(randomInt);
             // console.log(this.pokemonArr);
+        },
+
+        //accion de disparo que muestra pokemon
+        checkAnswer(pokemonId) {
+
+            this.showPokemon = true
+            // console.log('pokemon page llamado', pokemonId);
         }
     },
     mounted() {
