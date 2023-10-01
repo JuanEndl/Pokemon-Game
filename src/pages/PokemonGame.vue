@@ -2,7 +2,7 @@
     <div>
         <h1>¿que pokemon es ?</h1>
 
-        <pokemonPicture :pokemonId="6" :showPokemon="true"/>
+        <pokemonPicture :pokemonId="9" :showPokemon="true"/>
 
         <pokemonOptions/>
 
