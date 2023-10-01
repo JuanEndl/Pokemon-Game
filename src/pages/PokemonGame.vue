@@ -3,8 +3,10 @@
         <h1>¿que pokemon es ?</h1>
 
         <pokemonPicture :pokemonId="9" :showPokemon="true"/>
+        <pokemonOptions :pokemons="pokemonArr"/>
 
-        <pokemonOptions/>
+
+
 
     </div>
 </template>
@@ -19,11 +21,21 @@
     console.log( getPokemonOptions() );
 
 export default{
-    components: {
-    pokemonPicture,
-    pokemonOptions
-
-  }
+    components: { pokemonPicture,pokemonOptions },
+    data(){
+        return{
+            pokemonArr:[]
+        }
+    },
+    methods: {
+        async mixpokemonArray() {
+            this.pokemonArr = await getPokemonOptions()
+            console.log(this.pokemonArr);
+        }
+    },
+    mounted() {
+        this.mixpokemonArray()
+    }
 }
 
 </script>
