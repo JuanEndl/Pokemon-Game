@@ -17,7 +17,7 @@ const getPokemonOptions = async() => {
     
     const pokemons = await getPokemonsNames( mixedPokemons.slice(0,4) )
 
-    console.table(pokemons);
+    // console.table(pokemons);
     // console.log(mixedPokemons);
     // console.log(getPokemons());
 
@@ -29,8 +29,8 @@ const getPokemonOptions = async() => {
 const getPokemonsNames = async ( [a,b,c,d] = [] ) =>{
 
     const resp = await pokemonApi.get(`/5`)
-    console.log(resp.data.name, resp.data.id);
-    console.log(a,b,c,d);
+    // console.log(resp.data.name, resp.data.id);
+    // console.log(a,b,c,d);
 
     // el array
     const promiseArr = [
