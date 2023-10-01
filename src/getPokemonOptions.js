@@ -3,7 +3,7 @@ import pokemonApi from '../src/api/pokemonApi'
 
 
 const getPokemons = () => {
-    const pokemonsArr = Array.from( Array(1000) )
+    const pokemonsArr = Array.from( Array(151) )
   
 
     return pokemonsArr.map ( ( _ , index ) => index + 1  )

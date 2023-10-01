@@ -10,9 +10,12 @@
         <pokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
         <pokemonOptions :pokemons="pokemonArr" @selection="checkAnswer"/>
 
-
-
-
+        <template v-if="showAnser">
+            <h2  class="fade-in">{{ mensaje }}</h2>
+            <button @click="newGame">
+                Nuevo juego
+            </button>
+        </template>
     </div>
 </template>
 
@@ -31,7 +34,9 @@ export default{
         return{
             pokemonArr:[],
             pokemon: null,
-            showPokemon:false
+            showPokemon:false,
+            showAnser: false,
+            mensaje: ''
         }
     },
     methods: {
@@ -48,7 +53,24 @@ export default{
         checkAnswer(pokemonId) {
 
             this.showPokemon = true
+            this.showAnser = true
             // console.log('pokemon page llamado', pokemonId);
+
+            if( pokemonId === this.pokemon.id ) {
+                this.mensaje = `Correcto, ${ this.pokemon.name }`
+            } else {
+                this.mensaje = `Incorrecto, es ${ this.pokemon.name }`
+            }
+
+        },
+        newGame() {
+
+            this.showPokemon = false
+            this.showAnser = false
+            this.pokemonArr = []
+            this.pokemon = null
+            this.mixpokemonArray()
+
         }
     },
     mounted() {
