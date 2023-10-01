@@ -14,6 +14,10 @@
     import pokemonPicture from '@/components/pokemonPicture';
     import pokemonOptions from '@/components/pokemonOptions';
 
+    import getPokemonOptions from '@/getPokemonOptions';
+
+    console.log( getPokemonOptions() );
+
 export default{
     components: {
     pokemonPicture,
@@ -23,4 +27,3 @@ export default{
 }
 
 </script>
-
