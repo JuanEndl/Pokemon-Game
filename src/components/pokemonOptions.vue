@@ -1,7 +1,7 @@
 <template>
     <div class="options-container">
         <ul>
-            <li v-for="pokemon in pokemons" :key="pokemon.id" @click="$emit( 'selection', pokemon.id )" >
+            <li class="buttonButton" v-for="pokemon in pokemons" :key="pokemon.id" @click="$emit( 'selection', pokemon.id )" >
                 {{ pokemon.name }}
             </li>
         </ul>
@@ -27,6 +27,8 @@
 <style scoped>
 
 ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     
 }
@@ -37,6 +39,7 @@ li {
     cursor: pointer;
     margin-bottom: 10px;
     width: 250px;
+    margin: 70px 15px 0 15px
 }
 
 li:hover {

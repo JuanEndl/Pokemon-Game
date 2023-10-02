@@ -44,6 +44,7 @@ img {
     height: 200px;
     position: absolute;
     width: 100vw;
+    margin-top: 20px;
     margin-left: -50vw;
     user-select: none;
     -moz-user-select: none;
