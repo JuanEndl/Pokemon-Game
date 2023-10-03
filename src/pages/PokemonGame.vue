@@ -1,7 +1,7 @@
 <template>
 
     <!-- intenta verificar si pokemon tiene un valor -->
-    <h1 v-if="!pokemon"> Espere por favor...... </h1> 
+    <h1 v-if="!pokemon" class="#body"> Espere por favor...... </h1> 
 
     
     <div v-else="pokemon">

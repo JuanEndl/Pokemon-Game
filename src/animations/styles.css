@@ -1,8 +1,11 @@
 html, body {
    
-    background-color: rgb(240, 64, 64);
-    background-size:auto ;
+    background-color: #183D3D;
     margin: 0px;
+}
+
+h1, h2{
+  color: aliceblue;
 }
 
 button {
