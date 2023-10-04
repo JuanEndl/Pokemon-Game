@@ -11,7 +11,7 @@ h1, h2{
 button {
     width: 200px;
     height: 60px;
-    border: 3px solid #315cfd;
+    border: 3px solid #f70000;
     border-radius: 45px;
     transition: all 0.3s;
     cursor: pointer;
@@ -22,7 +22,6 @@ button {
   }
   
   button:hover {
-    background: #315cfd;
-    color: white;
+    background: #f70000;
     font-size: 1.5em;
   }
