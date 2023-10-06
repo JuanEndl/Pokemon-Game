@@ -64,7 +64,7 @@ li {
   top: 180%;
   width: 160%;
   height: 190%;
-  background-color: #009087;
+  background-color: #00EEFF;
   border-radius: 50%;
   display: block;
   transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -73,18 +73,18 @@ li {
 
 .buttonButton:hover {
   color: #ffffff;
-  border: 1px solid #009087;
+  border: 1px solid #00FFFF;
 }
 
 .buttonButton:hover:before {
   top: -35%;
-  background-color: #009087;
+  background-color: #000000;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 .buttonButton:hover:after {
   top: -45%;
-  background-color: #009087;
+  background-color: #000000;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
